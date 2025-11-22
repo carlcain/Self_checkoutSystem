@@ -3,8 +3,8 @@ package org.rocs.vra.Profile;
 // a class na nag store ng current costumer
 public class CostumerLogin
 {
-    private String costumerName;
-    private String costumerNumber;
+    private static String costumerName;
+    private static String costumerNumber;
 
     public void setCostumerName(String costumerName) {
         this.costumerName = costumerName;
@@ -12,6 +12,14 @@ public class CostumerLogin
 
     public void setCostumerNumber(String costumerNumber) {
         this.costumerNumber = costumerNumber;
+    }
+
+    public String getCostumerNumber() {
+        return costumerNumber;
+    }
+
+    public String getCostumerName() {
+        return costumerName;
     }
 
     public void Reset()

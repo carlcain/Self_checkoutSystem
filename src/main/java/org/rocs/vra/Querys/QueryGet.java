@@ -2,8 +2,8 @@ package org.rocs.vra.Querys;
 
 public enum QueryGet
 {
-    set1("select costumer from userInfo"),
-    set2("select costumer, contact_number from userInfo");
+    set1("select costumer, contact_number from userInfo"),
+    set2("select Item_desc, Unit_price from Items");
 
     private final String query;
 

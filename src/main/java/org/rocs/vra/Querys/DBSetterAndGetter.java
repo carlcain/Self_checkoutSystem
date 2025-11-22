@@ -13,8 +13,9 @@ public class DBSetterAndGetter
         switch (query)
         {
             case 1: // get all users
-                return connectionHelper.getQuery(QueryGet.set1.getquery(), 1);
-
+                return connectionHelper.getQuery(QueryGet.set1.getquery(), 2);
+            case 2:
+                return connectionHelper.getQuery(QueryGet.set2.getquery(), 2);
             default:
                 throw new IllegalStateException("Unexpected value: " + query);
         }
