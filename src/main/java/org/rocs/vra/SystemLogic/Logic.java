@@ -37,7 +37,7 @@ public class Logic
         return false;
     }
 
-    public void History(ArrayList<ArrayList<String>> DBinput)
+    public void History(ArrayList<ArrayList<String>> DBinput)//TODO: i dont know
     {
         ArrayList<String> ItemName = new ArrayList<>();
         ArrayList<String> TransDate = new ArrayList<>();

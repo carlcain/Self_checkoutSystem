@@ -12,7 +12,7 @@ public class ConnectionHelper
     // username: OwnerCheckoutSys
     // password: Changeme0
     public static String Url = "jdbc:oracle:thin:@localhost:1521:orcl";
-    public static String username = "LibApp";
+    public static String username = "OwnerCheckoutSys";
     public static String password = "Changeme0";
 
     private static Connection con;
