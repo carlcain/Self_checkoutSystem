@@ -1,5 +1,6 @@
 package org.rocs.vra.Dialog;
 
+import org.rocs.vra.ErrorExceptions.ExceptionMissinput;
 import org.rocs.vra.Querys.DBSetterAndGetter;
 import org.rocs.vra.SystemLogic.Logic;
 
@@ -15,10 +16,17 @@ public class Transaction
 
     public Transaction()
     {
-        login();
+        try
+        {
+            login();
+        }
+        catch (ExceptionMissinput e)
+        {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void login()
+    public void login()throws ExceptionMissinput
     {
         System.out.println("====================");
         System.out.println("Login");
@@ -37,7 +45,7 @@ public class Transaction
         System.out.println("====================");
     }
 
-    public void transac()
+    public void transac() throws ExceptionMissinput
     {
         System.out.println("====================");
         System.out.println("navigation: input some of the characters to navigate");
@@ -45,7 +53,7 @@ public class Transaction
         System.out.println("History: h");
         System.out.println("Profile: p");
         System.out.print("choice: ");
-        String choice = "";
+        String choice = sc.next();
         choice = choice.toLowerCase(); // prevent error when user accedentaly use uppercase
 
         if(choice.equals("o")) // order
@@ -62,7 +70,7 @@ public class Transaction
         }
         else
         {
-
+            throw new ExceptionMissinput("No input exist!");
         }
 
         sc.close();
