@@ -28,7 +28,7 @@ public class ConnectionHelper
     }
 
     // method to connect to the Database (this method activate at the very start when application open)
-    public static void getConnection()
+    public static void getConnection(String getquery)
     {
         try
         {
@@ -58,7 +58,7 @@ public class ConnectionHelper
                 for (int i = 1; i <= columnNum; i++)
                 {
                     row.add(rs.getString(i));
-                    System.out.println("get query: "+rs.getString(i));
+//                    System.out.println("get query: "+rs.getString(i));
                 }
                 list.add(row);
             }
@@ -87,7 +87,7 @@ public class ConnectionHelper
                 // for single input
                 if(singleinput != null)
                 {
-                    System.out.println("set query: "+query);
+//                    System.out.println("set query: "+query);
                     pstmt.setString(i, singleinput);
                 }
 

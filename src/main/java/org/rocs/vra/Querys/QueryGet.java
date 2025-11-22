@@ -2,17 +2,17 @@ package org.rocs.vra.Querys;
 
 public enum QueryGet
 {
-    set1("select costumer from userInfo;");
+    set1("select costumer from userInfo"),
+    set2("select costumer, contact_number from userInfo");
 
-
-    private String query;
+    private final String query;
 
     QueryGet(String query)
     {
         this.query = query;
     }
 
-    public String getDayNumber()
+    public String getquery()
     {
         return this.query;
     }
