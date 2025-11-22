@@ -79,10 +79,10 @@ public class Transaction
         }
     }
 
-    public void order()
+    public void order() throws ExceptionMissinput
     {
         System.out.println("====================");
-        
+
         // dis only display items
         ArrayList<ArrayList<String>> input = dbSetterAndGetter.getInputs(2, null, null);
 
@@ -90,11 +90,16 @@ public class Transaction
         {
             System.out.println("Item Name: "+input.get(i).get(0)+" | Price: "+input.get(i).get(1));
         }
+        System.out.println("====================");
+
+        transac();
     }
 
     public void history()
     {
-
+        System.out.println("====================");
+        ArrayList<ArrayList<String>> input = dbSetterAndGetter.getInputs(3, null, null);
+        logic.History(input);
     }
 
     public void profile() throws ExceptionMissinput {
